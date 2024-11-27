@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://csdca2tidtoib"]
+
+[ext_resource type="PackedScene" uid="uid://kaw6iv8hygad" path="res://scene/laser.tscn" id="1_h3qp5"]
+[ext_resource type="Script" uid="uid://dhtab7pqibtkx" path="res://script/bouncing_laser.gd" id="1_hpscl"]
+[ext_resource type="PackedScene" uid="uid://cfvjj74s8n83f" path="res://scene/reflectivePit.tscn" id="2_mpfay"]
+
+[node name="BouncingLaser" type="Node2D" node_paths=PackedStringArray("laser", "pit")]
+script = ExtResource("1_hpscl")
+laser = NodePath("Laser")
+pit = NodePath("ReflectivePit")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
+zoom = Vector2(2.506, 2.506)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -65.0
+offset_top = -166.0
+offset_right = -25.0
+offset_bottom = -143.0
+
+[node name="Laser" parent="." instance=ExtResource("1_h3qp5")]
+position = Vector2(-478.876, -445.342)
+velocity = Vector2(-0.622936, -0.653713)
+
+[node name="ReflectivePit" parent="." instance=ExtResource("2_mpfay")]
+position = Vector2(38, 168)

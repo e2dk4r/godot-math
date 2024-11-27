@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv764fgvqjp37"]
+
+[ext_resource type="Script" uid="uid://by7rqphm8pons" path="res://script/player.gd" id="1_hjaqi"]
+[ext_resource type="Texture2D" uid="uid://cnss62nay47hl" path="res://asset/brick-pack/Special/extra_character_a.svg" id="1_xo3ru"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_hjaqi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_xo3ru")

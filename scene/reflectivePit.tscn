@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfvjj74s8n83f"]
+
+[ext_resource type="Script" uid="uid://b2v4xnuwyofv2" path="res://script/reflective_pit.gd" id="1_3fmkl"]
+
+[node name="ReflectivePit" type="Node2D"]
+script = ExtResource("1_3fmkl")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+position = Vector2(-119, -35)
+color = Color(0.448505, 0.336888, 0.199223, 1)
+polygon = PackedVector2Array(-139, -17, -181, -165, -52, -170, -85, -228, -142, -309, -235, -311, -236, 36, 439, 36, 429, -303, 136, -290, 349, -223, 365, -57, 271, -83, 229, -142, 212, -5, 106, -23, 50, -70, -4, -14, -70, -33)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-93, -35)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-26, 0)
+polygon = PackedVector2Array(-139, -17, -181, -165, -52, -170, -85, -228, -142, -309, -235, -311, -236, 36, 439, 36, 429, -303, 136, -290, 349, -223, 365, -57, 271, -83, 229, -142, 212, -5, 106, -23, 50, -70, -4, -14, -70, -33)

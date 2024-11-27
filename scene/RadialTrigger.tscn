@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4p8ywunt0b74"]
+
+[ext_resource type="Script" uid="uid://c76t3cd5vfqq6" path="res://script/radialTrigger.gd" id="1_7e1l4"]
+[ext_resource type="PackedScene" uid="uid://dv764fgvqjp37" path="res://scene/player.tscn" id="2_tfbki"]
+[ext_resource type="PackedScene" uid="uid://ca1g1jxf3hdli" path="res://scene/explosive.tscn" id="3_ou5bi"]
+
+[node name="RadialTrigger" type="Node2D" node_paths=PackedStringArray("player", "explosive")]
+script = ExtResource("1_7e1l4")
+player = NodePath("Player")
+explosive = NodePath("Explosive")
+
+[node name="Player" parent="." instance=ExtResource("2_tfbki")]
+position = Vector2(191, 81)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Explosive" parent="." instance=ExtResource("3_ou5bi")]
+position = Vector2(-170, 61)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -332.0
+offset_top = -124.0
+offset_right = -23.0
+offset_bottom = -23.0
+text = "diff @(361.00, 20.00) 361.55 px 6.03 m
+  explosive @(-170.00, 61.00)
+  player    @(191.00, 81.00)
+explodes no"
+clip_text = true

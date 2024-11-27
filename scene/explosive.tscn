@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca1g1jxf3hdli"]
+
+[ext_resource type="Script" uid="uid://d3bs3l2sxrwqy" path="res://script/explosive.gd" id="1_cw03q"]
+[ext_resource type="Texture2D" uid="uid://nplr610wrdf5" path="res://asset/brick-pack/Special/extra_crate_explosive.svg" id="1_ufheu"]
+
+[node name="Explosive" type="Node2D"]
+script = ExtResource("1_cw03q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_ufheu")
